@@ -145,16 +145,18 @@ body {
   transform: translateX(-50%);
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail {
+  height: 100%;
   flex-basis: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: bold;
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header span {
@@ -168,12 +170,12 @@ body {
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_content .title {
   text-align: center;
-  font-size: 216px;
+  font-size: 200px;
   font-weight: 900;
   white-space: nowrap;
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_text {
-  padding: 24px;
+  padding: 24px 0;
 }
 .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_text p {
   line-height: 1.8;
