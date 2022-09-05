@@ -82,15 +82,39 @@
         }
         .value_detail {
           flex-basis: 60%;
+          display: flex;
+          flex-direction: column;
           .value_header {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            font-size: 48px;
+            gap: 32px;
+            font-size: 40px;
             font-weight: bold;
             span {
               display: inline-block;
               margin-left: 8px;
+            }
+            .vigilance_level {
+              padding: 8px;
+              background-color: white;
+              color: #58779a;
+            }
+          }
+          .value_content {
+            .title {
+              text-align: center;
+              font-size: 216px;
+              font-weight: 900;
+              white-space: nowrap;
+            }
+          }
+          .value_text {
+            padding: 24px;
+            p {
+              line-height: 1.8;
+              font-size: 28px;
+              font-weight: normal;
             }
           }
         }
