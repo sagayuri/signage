@@ -3,160 +3,212 @@
 @use "common" as c;
 
 .heatstroke {
-  display: flex;
-  flex-direction: column;
-  background-image: url(../images/bg_heatstroke.jpg);
-  background-position: center;
-  background-size: cover;
-  font-weight: bold;
-  color: white;
-  header {
-    width: 100%;
-    height: 10.2%;
-    max-height: 111px;
-    padding: 24px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-basis: 10%;
-    background-image: url(../images/bg_header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    .content_title {
-      font-size: 48px;
-      letter-spacing: 2px;
-      @include m.mq(pc) {
-        font-size: 32px;
-      }
+  &.eva {
+    position: relative;
+    background-color: c.$eva-black;
+    color: white;
+    font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+      "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN",
+      "Hiragino Mincho ProN", sans-serif;
+    font-weight: bold;
+    &.s-vigilance {
+      background-image: url(../images/eva/bg_s-vigilance.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
-    .update_time {
-      font-size: 48px;
-      font-weight: bold;
-      @include m.mq(pc) {
-        font-size: 32px;
+    .bar_top {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .bar_bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    header {
+      height: 10.2%;
+      max-height: 111px;
+      padding: 32px 32px 24px 32px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      .content_title {
+        font-size: 48px;
       }
-      span {
-        display: inline-block;
-        margin-left: 4px;
-        margin-right: 8px;
-        font-size: 24px;
-        @include m.mq(pc) {
-          font-size: 16px;
+      .update_time {
+        font-size: 48px;
+        span {
+          margin-left: 4px;
+          margin-right: 8px;
+          display: inline-block;
+          font-size: 24px;
         }
       }
+    }
+    .content_body {
+      width: 56%;
+      margin: 0 auto;
     }
   }
-  .content_body {
-    height: 90%;
-    padding: 24px 32px;
-    flex-basis: 90%;
-    .content_wrapper {
-      height: 100%;
-      padding: 36px;
-      border-radius: 52px;
-      box-shadow: 0 15px #6a7478;
-      &.safety {
-        background-color: c.$safety; /*ほぼ安全*/
+  &.default {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg_heatstroke.jpg);
+    background-position: center;
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    header {
+      width: 100%;
+      height: 10.2%;
+      max-height: 111px;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 10%;
+      background-image: url(../images/bg_header.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      .content_title {
+        font-size: 48px;
+        letter-spacing: 2px;
+        @include m.mq(pc) {
+          font-size: 32px;
+        }
       }
-      &.attention {
-        background-color: c.$attention; /*注意*/
-      }
-      &.vigilance {
-        background-color: c.$vigilance; /*警戒*/
-      }
-      &.severe-vigilance {
-        background-color: c.$s-vigilance; /*厳重警戒*/
-      }
-      &.danger {
-        background-color: c.$danger; /*危険*/
-      }
-      .content_inner {
-        width: 100%;
-        height: 100%;
-        border: dotted 7px #fff;
-        border-radius: 48px;
-        padding: 32px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        .value_icon {
-          width: 30%;
-          min-width: 200px;
-          height: 100%;
-          position: relative;
-          img {
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+      .update_time {
+        font-size: 48px;
+        font-weight: bold;
+        @include m.mq(pc) {
+          font-size: 32px;
+        }
+        span {
+          display: inline-block;
+          margin-left: 4px;
+          margin-right: 8px;
+          font-size: 24px;
+          @include m.mq(pc) {
+            font-size: 16px;
           }
         }
-        .value_detail {
-          width: 60%;
+      }
+    }
+    .content_body {
+      height: 90%;
+      padding: 24px 32px;
+      flex-basis: 90%;
+      .content_wrapper {
+        height: 100%;
+        padding: 36px;
+        border-radius: 52px;
+        box-shadow: 0 15px #6a7478;
+        &.safety {
+          background-color: c.$safety; /*ほぼ安全*/
+        }
+        &.attention {
+          background-color: c.$attention; /*注意*/
+        }
+        &.vigilance {
+          background-color: c.$vigilance; /*警戒*/
+        }
+        &.severe-vigilance {
+          background-color: c.$s-vigilance; /*厳重警戒*/
+        }
+        &.danger {
+          background-color: c.$danger; /*危険*/
+        }
+        .content_inner {
+          width: 100%;
           height: 100%;
+          border: dotted 7px #fff;
+          border-radius: 48px;
+          padding: 32px;
           display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          .value_header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            font-size: 48px;
-            font-weight: bold;
-            @include m.mq(pc) {
-              font-size: 32px;
-            }
-            span {
-              display: inline-block;
-              margin-left: 8px;
-            }
-            .vigilance_level {
-              padding: 8px;
-              background-color: white;
-              color: c.$black;
-              /*ほぼ安全*/
-              &.safety {
-                color: c.$safety;
-              }
-              /*注意*/
-              &.attention {
-                color: c.$attention;
-              }
-              /*警戒*/
-              &.vigilance {
-                color: c.$vigilance;
-              }
-              /*厳重警戒*/
-              &.severe-vigilance {
-                color: c.$s-vigilance;
-              }
-              /*危険*/
-              &.danger {
-                color: c.$danger;
-              }
-            }
-          }
-          .value_content {
-            padding: 16px 0;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          align-items: center;
+          .value_icon {
+            width: 30%;
+            min-width: 200px;
+            height: 100%;
+            position: relative;
             img {
-              width: 100%;
+              width: auto;
               height: auto;
-              margin: 0 auto;
-              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
             }
           }
-          .value_text {
-            padding: 24px 0;
-            p {
-              line-height: 1.6;
-              font-size: 32px;
-              font-weight: 700;
+          .value_detail {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .value_header {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 32px;
+              font-size: 48px;
+              font-weight: bold;
               @include m.mq(pc) {
-                font-size: 24px;
+                font-size: 32px;
+              }
+              span {
+                display: inline-block;
+                margin-left: 8px;
+              }
+              .vigilance_level {
+                padding: 8px;
+                background-color: white;
+                color: c.$black;
+                /*ほぼ安全*/
+                &.safety {
+                  color: c.$safety;
+                }
+                /*注意*/
+                &.attention {
+                  color: c.$attention;
+                }
+                /*警戒*/
+                &.vigilance {
+                  color: c.$vigilance;
+                }
+                /*厳重警戒*/
+                &.severe-vigilance {
+                  color: c.$s-vigilance;
+                }
+                /*危険*/
+                &.danger {
+                  color: c.$danger;
+                }
+              }
+            }
+            .value_content {
+              padding: 16px 0;
+              img {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+              }
+            }
+            .value_text {
+              padding: 24px 0;
+              p {
+                line-height: 1.6;
+                font-size: 32px;
+                font-weight: 700;
+                @include m.mq(pc) {
+                  font-size: 24px;
+                }
               }
             }
           }

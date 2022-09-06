@@ -63,7 +63,55 @@ body {
   color: #333333;
 }
 
-.heatstroke {
+.heatstroke.eva {
+  position: relative;
+  background-color: #1d1412;
+  color: white;
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+  font-weight: bold;
+}
+.heatstroke.eva.s-vigilance {
+  background-image: url(../images/eva/bg_s-vigilance.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.heatstroke.eva .bar_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.heatstroke.eva .bar_bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.heatstroke.eva header {
+  height: 10.2%;
+  max-height: 111px;
+  padding: 32px 32px 24px 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.heatstroke.eva header .content_title {
+  font-size: 48px;
+}
+.heatstroke.eva header .update_time {
+  font-size: 48px;
+}
+.heatstroke.eva header .update_time span {
+  margin-left: 4px;
+  margin-right: 8px;
+  display: inline-block;
+  font-size: 24px;
+}
+.heatstroke.eva .content_body {
+  width: 56%;
+  margin: 0 auto;
+}
+.heatstroke.default {
   display: flex;
   flex-direction: column;
   background-image: url(../images/bg_heatstroke.jpg);
@@ -72,7 +120,7 @@ body {
   font-weight: bold;
   color: white;
 }
-.heatstroke header {
+.heatstroke.default header {
   width: 100%;
   height: 10.2%;
   max-height: 111px;
@@ -85,62 +133,62 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.heatstroke header .content_title {
+.heatstroke.default header .content_title {
   font-size: 48px;
   letter-spacing: 2px;
 }
 @media screen and (max-width: 1025px) {
-  .heatstroke header .content_title {
+  .heatstroke.default header .content_title {
     font-size: 32px;
   }
 }
-.heatstroke header .update_time {
+.heatstroke.default header .update_time {
   font-size: 48px;
   font-weight: bold;
 }
 @media screen and (max-width: 1025px) {
-  .heatstroke header .update_time {
+  .heatstroke.default header .update_time {
     font-size: 32px;
   }
 }
-.heatstroke header .update_time span {
+.heatstroke.default header .update_time span {
   display: inline-block;
   margin-left: 4px;
   margin-right: 8px;
   font-size: 24px;
 }
 @media screen and (max-width: 1025px) {
-  .heatstroke header .update_time span {
+  .heatstroke.default header .update_time span {
     font-size: 16px;
   }
 }
-.heatstroke .content_body {
+.heatstroke.default .content_body {
   height: 90%;
   padding: 24px 32px;
   flex-basis: 90%;
 }
-.heatstroke .content_body .content_wrapper {
+.heatstroke.default .content_body .content_wrapper {
   height: 100%;
   padding: 36px;
   border-radius: 52px;
   box-shadow: 0 15px #6a7478;
 }
-.heatstroke .content_body .content_wrapper.safety {
+.heatstroke.default .content_body .content_wrapper.safety {
   background-color: #58779a; /*ほぼ安全*/
 }
-.heatstroke .content_body .content_wrapper.attention {
+.heatstroke.default .content_body .content_wrapper.attention {
   background-color: #81ac62; /*注意*/
 }
-.heatstroke .content_body .content_wrapper.vigilance {
+.heatstroke.default .content_body .content_wrapper.vigilance {
   background-color: #c6b563; /*警戒*/
 }
-.heatstroke .content_body .content_wrapper.severe-vigilance {
+.heatstroke.default .content_body .content_wrapper.severe-vigilance {
   background-color: #d59369; /*厳重警戒*/
 }
-.heatstroke .content_body .content_wrapper.danger {
+.heatstroke.default .content_body .content_wrapper.danger {
   background-color: #c8787a; /*危険*/
 }
-.heatstroke .content_body .content_wrapper .content_inner {
+.heatstroke.default .content_body .content_wrapper .content_inner {
   width: 100%;
   height: 100%;
   border: dotted 7px #fff;
@@ -151,13 +199,13 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_icon {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
   width: 30%;
   min-width: 200px;
   height: 100%;
   position: relative;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_icon img {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_icon img {
   width: auto;
   height: auto;
   position: absolute;
@@ -165,14 +213,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail {
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,15 +229,15 @@ body {
   font-weight: bold;
 }
 @media screen and (max-width: 1025px) {
-  .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
     font-size: 32px;
   }
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header span {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header span {
   display: inline-block;
   margin-left: 8px;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level {
   padding: 8px;
   background-color: white;
   color: #333333;
@@ -199,40 +247,40 @@ body {
   /*厳重警戒*/
   /*危険*/
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.safety {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.safety {
   color: #58779a;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.attention {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.attention {
   color: #81ac62;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.vigilance {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.vigilance {
   color: #c6b563;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.severe-vigilance {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.severe-vigilance {
   color: #d59369;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.danger {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.danger {
   color: #c8787a;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_content {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content {
   padding: 16px 0;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_content img {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content img {
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_text {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text {
   padding: 24px 0;
 }
-.heatstroke .content_body .content_wrapper .content_inner .value_detail .value_text p {
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
   line-height: 1.6;
   font-size: 32px;
   font-weight: 700;
 }
 @media screen and (max-width: 1025px) {
-  .heatstroke .content_body .content_wrapper .content_inner .value_detail .value_text p {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
     font-size: 24px;
   }
 }/*# sourceMappingURL=heatstroke.css.map */
