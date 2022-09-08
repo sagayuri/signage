@@ -15,19 +15,44 @@
         rel="stylesheet">
 </head>
 
+<!--値が変わる時はclass名を変える-->
+
 <body class="heatstroke eva s-vigilance">
-    <img class="bar_top" src="../assets/images/eva/bar_top_s-vigilance.png" alt="">
-    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_s-vigilance.png" alt="">
+    <img class="bar_top" src="../assets/images/eva/bar_top_s-vigilance.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_s-vigilance.png" alt="" height="24">
+    <!--値が変わる時
+
+    /*ほぼ安全
+    <img class="bar_top" src="../assets/images/eva/bar_top_safety.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_safety.png" alt="" height="24">
+
+    /*注意
+    <img class="bar_top" src="../assets/images/eva/bar_top_attention.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_attention.png" alt="" height="24">
+
+    /*警戒
+    <img class="bar_top" src="../assets/images/eva/bar_top_vigilance.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_vigilance.png" alt="" height="24">
+
+    /*厳重警戒
+    <img class="bar_top" src="../assets/images/eva/bar_top_s-vigilance.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_s-vigilance.png" alt="" height="24">
+
+    /*危険
+    <img class="bar_top" src="../assets/images/eva/bar_top_danger.png" alt="" height="24">
+    <img class="bar_bottom" src="../assets/images/eva/bar_bottom_danger.png" alt="" height="24">
+    -->
     <header>
         <h1 class="content_title">暑さ指数[WBGT]</h1>
         <p class="update_time">8<span>月</span>23<span>日</span>11:00<span>時点</span></p>
     </header>
-    <main class="content_body">
+    <main>
         <div class="content_header">
             <p class="numerical_value">WBGT値<span class="value">30</span></p>
         </div>
         <div class="content_body">
             <p class="value_content">厳重警戒</p>
+            <!--値が変わる時はclass名を変える-->
             <p class="vigilance_level s-vigilance">警戒レベル<span class="value">4</span></p>
         </div>
         <div class="content_footer">

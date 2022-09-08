@@ -66,22 +66,36 @@ body {
 .heatstroke.eva {
   position: relative;
   background-color: #1d1412;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
   font-weight: bold;
 }
+.heatstroke.eva.safety {
+  background-image: url(../images/eva/bg_safety.png);
+}
+.heatstroke.eva.attention {
+  background-image: url(../images/eva/bg_attention.png);
+}
+.heatstroke.eva.vigilance {
+  background-image: url(../images/eva/bg_vigilance.png);
+}
 .heatstroke.eva.s-vigilance {
   background-image: url(../images/eva/bg_s-vigilance.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+.heatstroke.eva.danger {
+  background-image: url(../images/eva/bg_danger.png);
 }
 .heatstroke.eva .bar_top {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
 .heatstroke.eva .bar_bottom {
+  width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -89,7 +103,7 @@ body {
 .heatstroke.eva header {
   height: 10.2%;
   max-height: 111px;
-  padding: 32px 32px 24px 32px;
+  padding: 64px 32px 24px 32px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -97,6 +111,11 @@ body {
 }
 .heatstroke.eva header .content_title {
   font-size: 48px;
+}
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva header .content_title {
+    font-size: 32px;
+  }
 }
 .heatstroke.eva header .update_time {
   font-size: 48px;
@@ -107,9 +126,95 @@ body {
   display: inline-block;
   font-size: 24px;
 }
-.heatstroke.eva .content_body {
-  width: 56%;
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva header .update_time {
+    font-size: 32px;
+  }
+}
+.heatstroke.eva main {
+  width: 62%;
   margin: 0 auto;
+}
+.heatstroke.eva main .numerical_value {
+  text-align: center;
+  font-size: 68px;
+}
+.heatstroke.eva main .numerical_value span {
+  margin-left: 16px;
+  display: inline-block;
+  font-size: 70px;
+}
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva main .numerical_value {
+    font-size: 56px;
+  }
+}
+.heatstroke.eva main .content_body {
+  margin-top: 24px;
+}
+.heatstroke.eva main .content_body .value_content {
+  text-align: center;
+  font-size: 233px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva main .content_body .value_content {
+    font-size: 189px;
+  }
+}
+.heatstroke.eva main .content_body .vigilance_level {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 24px;
+  border: 4px solid white;
+  margin: 0 auto 32px;
+  font-size: 68px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #1d1412;
+  /*値によって色が変わる*/
+}
+.heatstroke.eva main .content_body .vigilance_level span {
+  margin-left: 16px;
+  display: inline-block;
+  font-size: 70px;
+}
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva main .content_body .vigilance_level {
+    font-size: 56px;
+  }
+}
+.heatstroke.eva main .content_body .vigilance_level.safety {
+  border: 4px solid #6eadd8;
+  background-color: rgba(110, 173, 216, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.attention {
+  border: 4px solid #6dad19;
+  background-color: rgba(109, 173, 25, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.vigilance {
+  border: 4px solid #ffd800;
+  background-color: rgba(255, 216, 0, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.s-vigilance {
+  border: 4px solid #f89901;
+  background-color: rgba(248, 153, 1, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.danger {
+  border: 4px solid #cd0001;
+  background-color: rgba(205, 0, 1, 0.6);
+  color: white;
+}
+.heatstroke.eva main .content_footer {
+  margin-top: 48px;
+}
+.heatstroke.eva main .content_footer .content_text {
+  font-size: 32px;
+}
+@media screen and (max-width: 1025px) {
+  .heatstroke.eva main .content_footer .content_text {
+    font-size: 24px;
+  }
 }
 .heatstroke.default {
   display: flex;

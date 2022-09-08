@@ -6,23 +6,37 @@
   &.eva {
     position: relative;
     background-color: c.$eva-black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: white;
     font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
       "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN",
       "Hiragino Mincho ProN", sans-serif;
     font-weight: bold;
+    &.safety {
+      background-image: url(../images/eva/bg_safety.png);
+    }
+    &.attention {
+      background-image: url(../images/eva/bg_attention.png);
+    }
+    &.vigilance {
+      background-image: url(../images/eva/bg_vigilance.png);
+    }
     &.s-vigilance {
       background-image: url(../images/eva/bg_s-vigilance.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    }
+    &.danger {
+      background-image: url(../images/eva/bg_danger.png);
     }
     .bar_top {
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
     }
     .bar_bottom {
+      width: 100%;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -30,13 +44,16 @@
     header {
       height: 10.2%;
       max-height: 111px;
-      padding: 32px 32px 24px 32px;
+      padding: 64px 32px 24px 32px;
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
       .content_title {
         font-size: 48px;
+        @include m.mq(pc) {
+          font-size: 32px;
+        }
       }
       .update_time {
         font-size: 48px;
@@ -46,11 +63,85 @@
           display: inline-block;
           font-size: 24px;
         }
+        @include m.mq(pc) {
+          font-size: 32px;
+        }
       }
     }
-    .content_body {
-      width: 56%;
+    main {
+      width: 62%;
       margin: 0 auto;
+      .numerical_value {
+        text-align: center;
+        font-size: 68px;
+        span {
+          margin-left: 16px;
+          display: inline-block;
+          font-size: 70px;
+        }
+        @include m.mq(pc) {
+          font-size: 56px;
+        }
+      }
+      .content_body {
+        margin-top: 24px;
+        .value_content {
+          text-align: center;
+          font-size: 233px;
+          white-space: nowrap;
+          @include m.mq(pc) {
+            font-size: 189px;
+          }
+        }
+        .vigilance_level {
+          width: fit-content;
+          padding: 8px 24px;
+          border: 4px solid white;
+          margin: 0 auto 32px;
+          font-size: 68px;
+          background-color: rgba(255, 255, 255, 0.6);
+          color: c.$eva-black;
+          span {
+            margin-left: 16px;
+            display: inline-block;
+            font-size: 70px;
+          }
+          @include m.mq(pc) {
+            font-size: 56px;
+          }
+          /*値によって色が変わる*/
+          &.safety {
+            border: 4px solid #6eadd8;
+            background-color: rgba(110, 173, 216, 0.6);
+          }
+          &.attention {
+            border: 4px solid #6dad19;
+            background-color: rgba(109, 173, 25, 0.6);
+          }
+          &.vigilance {
+            border: 4px solid #ffd800;
+            background-color: rgba(255, 216, 0, 0.6);
+          }
+          &.s-vigilance {
+            border: 4px solid #f89901;
+            background-color: rgba(248, 153, 1, 0.6);
+          }
+          &.danger {
+            border: 4px solid #cd0001;
+            background-color: rgba(205, 0, 1, 0.6);
+            color: white;
+          }
+        }
+      }
+      .content_footer {
+        margin-top: 48px;
+        .content_text {
+          font-size: 32px;
+          @include m.mq(pc) {
+            font-size: 24px;
+          }
+        }
+      }
     }
   }
   &.default {
