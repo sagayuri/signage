@@ -15,19 +15,19 @@
       "Hiragino Mincho ProN", sans-serif;
     font-weight: bold;
     &.safety {
-      background-image: url(../images/eva/bg_safety.png);
+      background-image: url(../images/heatstroke/eva/bg_safety.png);
     }
     &.attention {
-      background-image: url(../images/eva/bg_attention.png);
+      background-image: url(../images/heatstroke/eva/bg_attention.png);
     }
     &.vigilance {
-      background-image: url(../images/eva/bg_vigilance.png);
+      background-image: url(../images/heatstroke/eva/bg_vigilance.png);
     }
     &.s-vigilance {
-      background-image: url(../images/eva/bg_s-vigilance.png);
+      background-image: url(../images/heatstroke/eva/bg_s-vigilance.png);
     }
     &.danger {
-      background-image: url(../images/eva/bg_danger.png);
+      background-image: url(../images/heatstroke/eva/bg_danger.png);
     }
     .bar_top {
       width: 100%;
@@ -147,7 +147,7 @@
   &.default {
     display: flex;
     flex-direction: column;
-    background-image: url(../images/bg_heatstroke.jpg);
+    background-image: url(../images/heatstroke/bg_heatstroke.jpg);
     background-position: center;
     background-size: cover;
     font-weight: bold;
@@ -161,7 +161,7 @@
       justify-content: space-between;
       align-items: center;
       flex-basis: 10%;
-      background-image: url(../images/bg_header.jpg);
+      background-image: url(../images/heatstroke/bg_header.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       .content_title {

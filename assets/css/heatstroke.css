@@ -74,19 +74,19 @@ body {
   font-weight: bold;
 }
 .heatstroke.eva.safety {
-  background-image: url(../images/eva/bg_safety.png);
+  background-image: url(../images/heatstroke/eva/bg_safety.png);
 }
 .heatstroke.eva.attention {
-  background-image: url(../images/eva/bg_attention.png);
+  background-image: url(../images/heatstroke/eva/bg_attention.png);
 }
 .heatstroke.eva.vigilance {
-  background-image: url(../images/eva/bg_vigilance.png);
+  background-image: url(../images/heatstroke/eva/bg_vigilance.png);
 }
 .heatstroke.eva.s-vigilance {
-  background-image: url(../images/eva/bg_s-vigilance.png);
+  background-image: url(../images/heatstroke/eva/bg_s-vigilance.png);
 }
 .heatstroke.eva.danger {
-  background-image: url(../images/eva/bg_danger.png);
+  background-image: url(../images/heatstroke/eva/bg_danger.png);
 }
 .heatstroke.eva .bar_top {
   width: 100%;
@@ -219,7 +219,7 @@ body {
 .heatstroke.default {
   display: flex;
   flex-direction: column;
-  background-image: url(../images/bg_heatstroke.jpg);
+  background-image: url(../images/heatstroke/bg_heatstroke.jpg);
   background-position: center;
   background-size: cover;
   font-weight: bold;
@@ -234,7 +234,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-basis: 10%;
-  background-image: url(../images/bg_header.jpg);
+  background-image: url(../images/heatstroke/bg_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
