@@ -6,9 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>気象計</title>
+    <link rel="stylesheet" href="./assets/css/weather-gauge.css" type="text/css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body>
+<body class="Weather_gauge">
+    <ul class="Weather_gauge__List">
+        <!--気温-->
+        <li class="Weather_gauge__Item">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Temp">気温</h2>
+            <p class="Weather_gauge__Value">32.05<span>℃</span></p>
+            <div class="Weather_gauge__Other">
+                <p class="Weather_gauge__Other--Min">本日の最低気温<span>28.0</span>℃</p>
+                <p class="Weather_gauge__Other--Max">本日の最高気温<span>37.28</span>℃</p>
+            </div>
+        </li>
+        <!--湿度-->
+        <li class="Weather_gauge__Item">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Humidity">湿度</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Humidity">68<span>%</span></p>
+        </li>
+        <!--気圧-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Pressure">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Pressure">気温</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Pressure">1008.6<span>hPa</span></p>
+        </li>
+        <!--風向-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Direction">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Direction">風向き</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Direction">北北西</p>
+        </li>
+        <li class="Weather_gauge__Item Weather_guage--Temp">
+            <h2 class="Weather_guage__Title">気温</h2>
+            <p class="Weather_gauge__Value">32.05℃</p>
+            <p class="Weather_gauge--Max">本日の最低気温<span>28.05℃</span></p>
+            <p class="Weather_gauge--Min">本日の最高気温<span>37.28℃</span></p>
+        </li>
+        <li class="Weather_gauge__Item Weather_guage--Temp">
+            <h2 class="Weather_guage__Title">気温</h2>
+            <p class="Weather_gauge__Value">32.05℃</p>
+            <p class="Weather_gauge--Max">本日の最低気温<span>28.05℃</span></p>
+            <p class="Weather_gauge--Min">本日の最高気温<span>37.28℃</span></p>
+        </li>
+        <li class="Weather_gauge__Item Weather_guage--Temp">
+            <h2 class="Weather_guage__Title">気温</h2>
+            <p class="Weather_gauge__Value">32.05℃</p>
+            <p class="Weather_gauge--Max">本日の最低気温<span>28.05℃</span></p>
+            <p class="Weather_gauge--Min">本日の最高気温<span>37.28℃</span></p>
+        </li>
+        <li class="Weather_gauge__Item Weather_guage--Temp">
+            <h2 class="Weather_guage__Title">気温</h2>
+            <p class="Weather_gauge__Value">32.05℃</p>
+            <p class="Weather_gauge--Max">本日の最低気温<span>28.05℃</span></p>
+            <p class="Weather_gauge--Min">本日の最高気温<span>37.28℃</span></p>
+        </li>
+        <li class="Weather_gauge__Item Weather_guage--Temp">
+            <h2 class="Weather_guage__Title">気温</h2>
+            <p class="Weather_gauge__Value">32.05℃</p>
+            <p class="Weather_gauge--Max">本日の最低気温<span>28.05℃</span></p>
+            <p class="Weather_gauge--Min">本日の最高気温<span>37.28℃</span></p>
+        </li>
+    </ul>
 
 </body>
 
