@@ -14,9 +14,9 @@
     list-style-type: none;
   }
   &__Item {
-    width: 31%;
-    height: 320px;
-    margin-right: 20px;
+    width: -webkit-calc(100% / 3 - 20px);
+    width: calc(100% / 3 - 20px);
+    height: 31vh;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 25px;
@@ -26,25 +26,41 @@
     -webkit-box-shadow: 0px 3px 26px -8px rgba(7, 48, 122, 0.2);
     -ms-box-shadow: 0px 3px 26px -8px rgba(7, 48, 122, 0.2);
     box-shadow: 0px 3px 26px -8px rgba(7, 48, 122, 0.2);
+    box-sizing: border-box;
     @at-root {
       &--Pressure#{&} {
         background: url(../images/weather-gauge/bg_pressure.png) 50% 50%
           no-repeat;
         background-color: #fff;
       }
-      &--Direction {
+      &--Direction#{&} {
         background: url(../images/weather-gauge/wind-direction/wind_nnw.png) 50%
           50% no-repeat;
         background-color: #fff;
       }
-    }
-    &:nth-child(3n) {
-      margin-right: 0;
+      &--Uvi#{&} {
+        background-color: #c8787a; /*非常に強い*/
+        /*#d59369 強い*/
+        /*#ccb664 中程度*/
+        /*#58779a 弱い*/
+      }
+      &--Wbgt#{&} {
+        background-color: #d8a861; /*厳重警戒*/
+        /*#c8787a 危険*/
+        /*#c6b563 警戒*/
+        /*#49989c 注意*/
+        /*#58779a ほぼ安全*/
+      }
     }
   }
   &__Title {
     font-size: 36px;
     font-weight: bold;
+    @at-root {
+      &--White#{&} {
+        color: #fff;
+      }
+    }
     &::before {
       width: 45px;
       height: 40px;
@@ -56,7 +72,7 @@
     }
     @at-root {
       &--Temp#{&}::before {
-        background: url(../images/weather-gauge/icons/icon_temperture.png) 0 0
+        background: url(../images/weather-gauge/icons/icon_temp.png) 0 0
           no-repeat;
       }
       &--Humidity#{&}::before {
@@ -71,11 +87,34 @@
         background: url(../images/weather-gauge/icons/icon_wind_direction.png) 0
           0 no-repeat;
       }
+      &--Speed#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_wind_speed.png) 0 0
+          no-repeat;
+      }
+      &--Uvi#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_uvi.png) 0 0
+          no-repeat;
+      }
+      &--Sunrise#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_sunrise.png) 0 0
+          no-repeat;
+      }
+      &--Rainfall#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_rainfall.png) 0 0
+          no-repeat;
+      }
+      &--Wbgt#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_wbgt.png) 0 0
+          no-repeat;
+      }
     }
   }
   &__Value {
     font-size: 48px;
     font-weight: bold;
+    &--Unit {
+      font-size: 24px;
+    }
     @at-root {
       &--Humidity#{&} {
         width: fit-content;
@@ -92,7 +131,7 @@
         transform: translate(-50%, -50%);
         font-size: 36px;
       }
-      &--Direction {
+      &--Direction#{&} {
         width: fit-content;
         position: absolute;
         top: 50%;
@@ -100,8 +139,53 @@
         transform: translate(-50%, -50%);
         font-size: 36px;
       }
+      &--White#{&} {
+        color: #fff;
+      }
     }
-    span {
+
+    &--Average {
+      font-size: 24px;
+      &::before {
+        width: 39px;
+        height: 34px;
+        margin-right: 4px;
+        content: "";
+        position: relative;
+        top: 7px;
+        display: inline-block;
+        background: url(../images/weather-gauge/wind-speed/speed_90degrees.png)
+          0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &--Maximum {
+      font-size: 24px;
+      &::before {
+        width: 39px;
+        height: 34px;
+        margin-right: 4px;
+        content: "";
+        position: relative;
+        top: 7px;
+        display: inline-block;
+        background: url(../images/weather-gauge/wind-speed/speed_45degrees.png)
+          0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &--Ja {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &--Numbers {
+      margin: 0 8px 0 4px;
+      font-size: 48px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    &--Time {
       font-size: 24px;
     }
   }
@@ -113,21 +197,20 @@
       font-size: 18px;
       font-weight: bold;
       color: #5d87b7;
-      span {
-        margin: 0 4px 0 8px;
-        display: inline-block;
-        font-size: 24px;
-      }
     }
     &--Max {
       font-size: 18px;
       font-weight: bold;
       color: #cf737a;
-      span {
-        margin: 0 4px 0 8px;
-        display: inline-block;
-        font-size: 24px;
-      }
+    }
+    &--Day {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &--Numbers {
+      margin: 0 4px 0 8px;
+      display: inline-block;
+      font-size: 24px;
     }
   }
 }
