@@ -87,6 +87,11 @@ body {
   box-shadow: 0px 3px 26px -8px rgba(7, 48, 122, 0.2);
   box-sizing: border-box;
 }
+.Weather_gauge__Item--Humidity.Weather_gauge__Item {
+  background: url(../images/weather-gauge/humidity/humidity_61-70.png) 50% 50% no-repeat;
+  background-color: #fff;
+}
+
 .Weather_gauge__Item--Pressure.Weather_gauge__Item {
   background: url(../images/weather-gauge/bg_pressure.png) 50% 50% no-repeat;
   background-color: #fff;
