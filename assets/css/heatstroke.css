@@ -73,6 +73,11 @@ body {
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
   font-weight: bold;
 }
+@media screen and (max-width: 1200px) {
+  .heatstroke.eva {
+    background-position: left;
+  }
+}
 .heatstroke.eva.safety {
   background-image: url(../images/heatstroke/eva/bg_safety.png);
 }
@@ -134,6 +139,15 @@ body {
 .heatstroke.eva main {
   width: 62%;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1200px) {
+  .heatstroke.eva main {
+    width: 90%;
+  }
 }
 .heatstroke.eva main .numerical_value {
   text-align: center;
@@ -162,6 +176,11 @@ body {
     font-size: 189px;
   }
 }
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body .value_content {
+    font-size: 98px;
+  }
+}
 .heatstroke.eva main .content_body .vigilance_level {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -174,15 +193,15 @@ body {
   color: #1d1412;
   /*値によって色が変わる*/
 }
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body .vigilance_level {
+    font-size: 42px;
+  }
+}
 .heatstroke.eva main .content_body .vigilance_level span {
   margin-left: 16px;
   display: inline-block;
   font-size: 70px;
-}
-@media screen and (max-width: 1025px) {
-  .heatstroke.eva main .content_body .vigilance_level {
-    font-size: 56px;
-  }
 }
 .heatstroke.eva main .content_body .vigilance_level.safety {
   border: 4px solid #6eadd8;
@@ -224,6 +243,7 @@ body {
   background-size: cover;
   font-weight: bold;
   color: white;
+  overflow: scroll;
 }
 .heatstroke.default header {
   width: 100%;
@@ -274,9 +294,15 @@ body {
 }
 .heatstroke.default .content_body .content_wrapper {
   height: 100%;
+  min-height: 768px;
   padding: 36px;
   border-radius: 52px;
   box-shadow: 0 15px #6a7478;
+}
+@media screen and (max-width: 1200px) {
+  .heatstroke.default .content_body .content_wrapper {
+    min-height: 1300px;
+  }
 }
 .heatstroke.default .content_body .content_wrapper.safety {
   background-color: #58779a; /*ほぼ安全*/
@@ -293,6 +319,9 @@ body {
 .heatstroke.default .content_body .content_wrapper.danger {
   background-color: #c8787a; /*危険*/
 }
+.heatstroke.default .content_body .content_wrapper .content_area {
+  height: 100%;
+}
 .heatstroke.default .content_body .content_wrapper .content_inner {
   width: 100%;
   height: 100%;
@@ -304,11 +333,26 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 1200px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner {
+    flex-direction: column;
+  }
+}
 .heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
   width: 30%;
   min-width: 200px;
   height: 100%;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
+    width: 65%;
+  }
 }
 .heatstroke.default .content_body .content_wrapper .content_inner .value_icon img {
   width: auto;
@@ -324,6 +368,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 1200px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail {
+    width: 100%;
+  }
 }
 .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
   display: flex;
