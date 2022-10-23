@@ -1,13 +1,7 @@
 @use "reset" as r;
 @use "mixin" as m;
 @use "common" as c;
-
-@font-face {
-  font-family: "dseg";
-  src: url("../font/DSEG7Modern-Bold.ttf") format("ttf");
-  src: url("../font/DSEG7Modern-Bold.woff") format("woff");
-  src: url("../font/DSEG7Modern-Bold.woff2") format("woff2");
-}
+@use "font" as f;
 
 .noiseMeter {
   height: 100%;
@@ -149,9 +143,57 @@
     }
     &--flatPanel {
       background-image: url(../images/noise-meter/flatPanel/base.jpg);
+
+      .header {
+        background: rgba(8, 45, 133, 0.8);
+      }
+
+      .valueWrapper {
+        &__strings {
+          width: 100%;
+          padding-left: 56px;
+          margin-top: 32px;
+          background-image: url(../images/noise-meter/flatPanel/display.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include m.mq(vertical) {
+            width: 50%;
+          }
+        }
+        &__db {
+          width: 25%;
+          @include m.mq(vertical) {
+            width: 18%;
+          }
+        }
+      }
     }
     &--paper {
       background-image: url(../images/noise-meter/paper/base_paper.jpg);
+
+      .header {
+        background: rgba(8, 45, 133, 0.8);
+      }
+
+      .valueWrapper {
+        &__strings {
+          width: 100%;
+          padding-left: 56px;
+          margin-top: 32px;
+          background-image: url(../images/noise-meter/paper/blackBoard_small.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include m.mq(vertical) {
+            width: 50%;
+          }
+        }
+        &__db {
+          width: 25%;
+          @include m.mq(vertical) {
+            width: 18%;
+          }
+        }
+      }
     }
     &--eva {
       background-image: url(../images/noise-meter/eva/bg_noise-meter.png);

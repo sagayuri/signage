@@ -218,9 +218,57 @@ body {
 .noiseMeter--flatPanel {
   background-image: url(../images/noise-meter/flatPanel/base.jpg);
 }
+.noiseMeter--flatPanel .header {
+  background: rgba(8, 45, 133, 0.8);
+}
+.noiseMeter--flatPanel .valueWrapper__strings {
+  width: 100%;
+  padding-left: 56px;
+  margin-top: 32px;
+  background-image: url(../images/noise-meter/flatPanel/display.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 1200px) {
+  .noiseMeter--flatPanel .valueWrapper__strings {
+    width: 50%;
+  }
+}
+.noiseMeter--flatPanel .valueWrapper__db {
+  width: 25%;
+}
+@media screen and (max-width: 1200px) {
+  .noiseMeter--flatPanel .valueWrapper__db {
+    width: 18%;
+  }
+}
 
 .noiseMeter--paper {
   background-image: url(../images/noise-meter/paper/base_paper.jpg);
+}
+.noiseMeter--paper .header {
+  background: rgba(8, 45, 133, 0.8);
+}
+.noiseMeter--paper .valueWrapper__strings {
+  width: 100%;
+  padding-left: 56px;
+  margin-top: 32px;
+  background-image: url(../images/noise-meter/paper/blackBoard_small.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 1200px) {
+  .noiseMeter--paper .valueWrapper__strings {
+    width: 50%;
+  }
+}
+.noiseMeter--paper .valueWrapper__db {
+  width: 25%;
+}
+@media screen and (max-width: 1200px) {
+  .noiseMeter--paper .valueWrapper__db {
+    width: 18%;
+  }
 }
 
 .noiseMeter--eva {
