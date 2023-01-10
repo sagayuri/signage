@@ -396,4 +396,48 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}/*# sourceMappingURL=schedule.css.map */
+}
+.toastWrapper {
+  width: 100%;
+  max-width: 959px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  visibility: hidden;
+}
+.toastWrapper__content {
+  padding: 56px 80px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  border: 8px solid #444;
+  background-color: #DDD;
+  box-shadow: 10px 10px 10px rgba(68, 68, 68, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.toastWrapper__content:last-of-type {
+  margin-bottom: 0;
+}
+.toastWrapper__content img {
+  width: 120px;
+  height: 120px;
+}
+.toastWrapper__content p {
+  font-weight: bold;
+  font-size: 36px;
+}
+.toastWrapper__content--alert {
+  border: 8px solid #FFC700;
+  background-color: rgba(255, 246, 212, 0.8);
+}
+.toastWrapper__content--delivery {
+  border: 8px solid #057BAE;
+  background-color: rgba(210, 242, 255, 0.8);
+}
+.toastWrapper__content--time {
+  border: 8px solid #05AE34;
+  background-color: rgba(208, 255, 221, 0.8);
+}
